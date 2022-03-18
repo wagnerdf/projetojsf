@@ -23,9 +23,10 @@ public class PessoaBean {
 		
 		if(nomes.size() > 3) {
 			commandButton.setDisabled(true);
+			return "paginanavegada";
 		}
 		
-		return "";
+		return ""; // null ou vazio fica na mesma página -> outcome
 	}
 	
 	public List<String> getNomes() {
