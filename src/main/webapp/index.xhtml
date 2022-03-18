@@ -5,6 +5,14 @@
 
 <h:head>
 	<title>Olá JSF</title>
+	
+	<script>
+		function alterarValorDoCampo(){
+			var campo = document.getElementById('formPessoa:nome');
+			campo.value = 'Eu cliquei no campo :) ';
+		}
+	</script>
+	
 </h:head>
 
 <h:body>
@@ -12,6 +20,14 @@
 	<h:form id="formPessoa">
 		
 		<h1>Olá JSF - Pagina index.jsf</h1>
+		
+		<h:inputText id="nome"/>
+		<h:commandButton value="Clicar" onclick="alterarValorDoCampo();"/>
+		
+		
+		
+		<br/>
+		<br/>
 		<h:commandButton value="Navegar" action="primeirapagina" />
 		<h:commandButton value="Navegar Explicita" action="explicita" />  <!-- Navegação explicita não é muito usada, mas é util em alguns casos  -->
 		
